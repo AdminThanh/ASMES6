@@ -1,0 +1,798 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sản phẩm - MetaChair | Nguyễn Đăng Thành - PS18241</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="../../src/assets/client/images/favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+
+    <!-- All css files are included here. -->
+    <!-- Bootstrap fremwork main css -->
+    <link rel="stylesheet" href="../../src/assets/client/css/bootstrap.min.css">
+    <!-- Owl Carousel min css -->
+    <link rel="stylesheet" href="../../src/assets/client/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../src/assets/client/css/owl.theme.default.min.css">
+    <!-- This core.css file contents all plugings css file. -->
+    <link rel="stylesheet" href="../../src/assets/client/css/core.css">
+    <!-- Theme shortcodes/elements style -->
+    <link rel="stylesheet" href="../../src/assets/client/css/shortcode/shortcodes.css">
+    <!-- Theme main style -->
+    <link rel="stylesheet" href="../../src/assets/client/css/style.css">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="../../src/assets/client/css/responsive.css">
+    <!-- User style -->
+    <link rel="stylesheet" href="../../src/assets/client/css/custom.css">
+
+
+    <!-- Modernizr JS -->
+    <script src="../../src/assets/client/js/vendor/modernizr-3.5.0.min.js"></script>
+<script defer src="../script/index_bundle.min.js"></script><script defer src="../script/vendors-node_modules_firebase_app_dist_index_esm_js-node_modules_firebase_database_dist_index-dcdcda_bundle.min.js"></script><script defer src="../script/product_bundle.min.js"></script><script defer src="../script/addProduct_bundle.min.js"></script><script defer src="../script/editProduct_bundle.min.js"></script><script defer src="../script/category_bundle.min.js"></script><script defer src="../script/addCategory_bundle.min.js"></script><script defer src="../script/editCategory_bundle.min.js"></script></head>
+
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Body main wrapper start -->
+    <div class="wrapper">
+        <!-- Start Header Style -->
+        <header id="htc__header" class="htc__header__area header--one">
+            <!-- Start Mainmenu Area -->
+            <div id="sticky-header-with-topbar" class="mainmenu__wrap sticky__header">
+                <div class="container">
+                    <div class="row">
+                        <div class="menumenu__container clearfix">
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">
+                                <div class="logo">
+                                    <a href="index.html"><img src="../../src/assets/client/images/logo/4.png" alt="logo images"></a>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-lg-8 col-sm-5 col-xs-3">
+                                <nav class="main__menu__nav hidden-xs hidden-sm">
+                                    <ul class="main__menu">
+                                        <li class="drop"><a href="index.html">Trang chủ</a></li>
+                                        <li class="drop"><a href="product-grid.html">Sản phẩm</a>
+                                            <ul class="dropdown" id="list_category">
+                                                <!-- <li><a href="product-grid.html">Product Grid</a></li>
+                                                <li><a href="product-details.html">Product Details</a></li> -->
+                                            </ul>
+                                        </li>
+                                        <li class="drop"><a href="blog.html">Tin tức</a></li>
+                                        <li class="drop"><a href="#">Giới thiệu</a></li>
+                                        <li><a href="contact.html">Liên hệ</a></li>
+                                    </ul>
+                                </nav>
+
+                                <div class="mobile-menu clearfix visible-xs visible-sm">
+                                    <nav id="mobile_dropdown">
+                                        <ul>
+                                            <li><a href="index.html">Trang chủ</a></li>
+                                            <li class="drop"><a href="#">Sản phẩm</a>
+                                                <ul class="dropdown" id="list_category">
+                                                    <!-- LIST CATEGORY -->
+                                                </ul>
+                                            </li>
+                                            <li><a href="blog.html">Tin tức</a></li>
+                                            <li><a href="#">Giới thiệu</a></li>
+                                            <li><a href="contact.html">Liên hệ</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-lg-2 col-sm-4 col-xs-4">
+                                <div class="header__right">
+                                    <div class="header__search search search__open">
+                                        <a href="#"><i class="icon-magnifier icons"></i></a>
+                                    </div>
+                                    <div class="header__account">
+                                        <a href="#"><i class="icon-user icons"></i></a>
+                                    </div>
+                                    <div class="htc__shopping__cart">
+                                        <a class="cart__menu" href="#"><i class="icon-handbag icons"></i></a>
+                                        <a href="#"><span class="htc__qua" class="numCart" id="numCart">0</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-menu-area"></div>
+                </div>
+            </div>
+            <!-- End Mainmenu Area -->
+        </header>
+        <!-- End Header Area -->
+
+        <div class="body__overlay"></div>
+        <!-- Start Offset Wrapper -->
+        <div class="offset__wrapper">
+            <!-- Start Search Popap -->
+            <div class="search__area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="search__inner">
+                                <form action="product-grid.html" method="get">
+                                    <input name="search" placeholder="Tìm kiếm sản phẩm... " type="text">
+                                    <button type="submit"></button>
+                                </form>
+                                <div class="search__close__btn">
+                                    <span class="search__close__btn_icon"><i class="zmdi zmdi-close"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Search Popap -->
+            <!-- Start Cart Panel -->
+            <div class="shopping__cart">
+                <div class="shopping__cart__inner">
+                    <div class="offsetmenu__close__btn">
+                        <a href="#"><i class="zmdi zmdi-close"></i></a>
+                    </div>
+                    <div class="shp__cart__wrap" id="list_cart">
+                        <!-- LIST CART -->
+                    </div>
+                    <ul class="shoping__total">
+                        <li class="subtotal">Tổng giá:</li>
+                        <li class="total__price" id="total__price">100000</li>
+                    </ul>
+                    <ul class="shopping__btn">
+                        <li><a href="cart.html">Xem giỏ hàng</a></li>
+                        <li class="shp__checkout"><a href="checkout.html">Thanh toán</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Cart Panel -->
+        </div>
+        <!-- End Offset Wrapper -->
+        <!-- Start Bradcaump area -->
+        <div class="ht__bradcaump__area"
+            style="background: rgba(0, 0, 0, 0) url(../../src/assets/client/images/bg/4.jpg) no-repeat scroll center center / cover ;">
+            <div class="ht__bradcaump__wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="bradcaump__inner">
+                                <nav class="bradcaump-inner">
+                                    <a class="breadcrumb-item" href="index.html">Trang chủ</a>
+                                    <span class="brd-separetor"><i class="zmdi zmdi-chevron-right"></i></span>
+                                    <span class="breadcrumb-item active nameCateTitle" id="nameCateTitle"></span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Bradcaump area -->
+        <!-- Start Product Grid -->
+        <section class="htc__product__grid bg__white ptb--100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-lg-push-3 col-md-9 col-md-push-3 col-sm-12 col-xs-12">
+                        <div class="htc__product__rightidebar">
+                            <h4 class="title__line--4" id="name_title"></h4>
+                            <div class="htc__grid__top">
+                                <div class="htc__select__option">
+                                    <select class="ht__select" onchange="sortBy(this)" class="sortBy">
+                                        <option>Mặc định</option>
+                                        <option>Lọc theo giá thấp - cao</option>
+                                        <option>Lọc theo giá cao - thấp</option>
+                                        <option>Lọc theo ngày nhập</option>
+                                    </select>
+                                </div>
+                                <div class="ht__pro__qun">
+                                    <span>Tìm được <span style="font-weight: bold;" id="numProducts"></span> sản
+                                        phẩm</span>
+                                </div>
+                                <!-- Start List And Grid View -->
+                                <ul class="view__mode" role="tablist">
+                                    <li role="presentation" class="grid-view active"><a href="#grid-view" role="tab"
+                                            data-toggle="tab"><i class="zmdi zmdi-grid"></i></a></li>
+                                    <li role="presentation" class="list-view"><a href="#list-view" role="tab"
+                                            data-toggle="tab"><i class="zmdi zmdi-view-list"></i></a></li>
+                                </ul>
+                                <!-- End List And Grid View -->
+                            </div>
+                            <!-- Start Product View -->
+                            <div class="row">
+                                <div class="shop__grid__view__wrap">
+                                    <div role="tabpanel" id="grid-view"
+                                        class="single-grid-view tab-pane fade in active clearfix productCate"
+                                        id="productCate">
+                                        <!-- Start Single Product -->
+
+                                        <!-- End Single Product -->
+                                    </div>
+                                    <div role="tabpanel" id="list-view" class="single-grid-view tab-pane fade clearfix">
+                                        <div class="col-xs-12">
+                                            <div class="ht__list__wrap">
+                                                <!-- Start List Product -->
+                                                <div class="ht__list__product">
+                                                    <div class="ht__list__thumb">
+                                                        <a href="product-details.html"><img
+                                                                src="../../src/assets/client/images/product-2/pro-1/1.jpg"
+                                                                alt="product images"></a>
+                                                    </div>
+                                                    <div class="htc__list__details">
+                                                        <h2><a href="product-details.html">Product Title Here </a></h2>
+                                                        <ul class="pro__prize">
+                                                            <li class="old__prize">$82.5</li>
+                                                            <li>$75.2</li>
+                                                        </ul>
+                                                        <ul class="rating">
+                                                            <li><i class="icon-star icons"></i></li>
+                                                            <li><i class="icon-star icons"></i></li>
+                                                            <li><i class="icon-star icons"></i></li>
+                                                            <li class="old"><i class="icon-star icons"></i></li>
+                                                            <li class="old"><i class="icon-star icons"></i></li>
+                                                        </ul>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisLorem ipsum
+                                                            dolor sit amet, consec adipisicing elit, sed do eiusmod
+                                                            tempor incididunt ut labore et dolore magna aliqul Ut enim
+                                                            ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                            nisi ut aliquip ex ea commodo consequat.</p>
+                                                        <div class="fr__list__btn">
+                                                            <a class="fr__btn" href="cart.html">Add To Cart</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End List Product -->
+                                                <!-- Start List Product -->
+                                                <div class="ht__list__product">
+                                                    <div class="ht__list__thumb">
+                                                        <a href="product-details.html"><img
+                                                                src="../../src/assets/client/images/product-2/pro-1/2.jpg"
+                                                                alt="product images"></a>
+                                                    </div>
+                                                    <div class="htc__list__details">
+                                                        <h2><a href="product-details.html">Product Title Here </a></h2>
+                                                        <ul class="pro__prize">
+                                                            <li class="old__prize">$82.5</li>
+                                                            <li>$75.2</li>
+                                                        </ul>
+                                                        <ul class="rating">
+                                                            <li><i class="icon-star icons"></i></li>
+                                                            <li><i class="icon-star icons"></i></li>
+                                                            <li><i class="icon-star icons"></i></li>
+                                                            <li class="old"><i class="icon-star icons"></i></li>
+                                                            <li class="old"><i class="icon-star icons"></i></li>
+                                                        </ul>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisLorem ipsum
+                                                            dolor sit amet, consec adipisicing elit, sed do eiusmod
+                                                            tempor incididunt ut labore et dolore magna aliqul Ut enim
+                                                            ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                            nisi ut aliquip ex ea commodo consequat.</p>
+                                                        <div class="fr__list__btn">
+                                                            <a class="fr__btn" href="cart.html">Add To Cart</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End List Product -->
+                                                <!-- Start List Product -->
+                                                <div class="ht__list__product">
+                                                    <div class="ht__list__thumb">
+                                                        <a href="product-details.html"><img
+                                                                src="../../src/assets/client/images/product-2/pro-1/3.jpg"
+                                                                alt="product images"></a>
+                                                    </div>
+                                                    <div class="htc__list__details">
+                                                        <h2><a href="product-details.html">Product Title Here </a></h2>
+                                                        <ul class="pro__prize">
+                                                            <li class="old__prize">$82.5</li>
+                                                            <li>$75.2</li>
+                                                        </ul>
+                                                        <ul class="rating">
+                                                            <li><i class="icon-star icons"></i></li>
+                                                            <li><i class="icon-star icons"></i></li>
+                                                            <li><i class="icon-star icons"></i></li>
+                                                            <li class="old"><i class="icon-star icons"></i></li>
+                                                            <li class="old"><i class="icon-star icons"></i></li>
+                                                        </ul>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisLorem ipsum
+                                                            dolor sit amet, consec adipisicing elit, sed do eiusmod
+                                                            tempor incididunt ut labore et dolore magna aliqul Ut enim
+                                                            ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                            nisi ut aliquip ex ea commodo consequat.</p>
+                                                        <div class="fr__list__btn">
+                                                            <a class="fr__btn" href="cart.html">Add To Cart</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End List Product -->
+                                                <!-- Start List Product -->
+                                                <div class="ht__list__product">
+                                                    <div class="ht__list__thumb">
+                                                        <a href="product-details.html"><img
+                                                                src="../../src/assets/client/images/product-2/pro-1/4.jpg"
+                                                                alt="product images"></a>
+                                                    </div>
+                                                    <div class="htc__list__details">
+                                                        <h2><a href="product-details.html">Product Title Here </a></h2>
+                                                        <ul class="pro__prize">
+                                                            <li class="old__prize">$82.5</li>
+                                                            <li>$75.2</li>
+                                                        </ul>
+                                                        <ul class="rating">
+                                                            <li><i class="icon-star icons"></i></li>
+                                                            <li><i class="icon-star icons"></i></li>
+                                                            <li><i class="icon-star icons"></i></li>
+                                                            <li class="old"><i class="icon-star icons"></i></li>
+                                                            <li class="old"><i class="icon-star icons"></i></li>
+                                                        </ul>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisLorem ipsum
+                                                            dolor sit amet, consec adipisicing elit, sed do eiusmod
+                                                            tempor incididunt ut labore et dolore magna aliqul Ut enim
+                                                            ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                            nisi ut aliquip ex ea commodo consequat.</p>
+                                                        <div class="fr__list__btn">
+                                                            <a class="fr__btn" href="cart.html">Add To Cart</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End List Product -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Product View -->
+                        </div>
+                        <!-- Start Pagenation -->
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <ul class="htc__pagenation">
+                                    <li><a href="#"><i class="zmdi zmdi-chevron-left"></i></a></li>
+                                    <li><a href="#">1</a></li>
+                                    <li class="active"><a href="#">3</a></li>
+                                    <li><a href="#">19</a></li>
+                                    <li><a href="#"><i class="zmdi zmdi-chevron-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Pagenation -->
+                    </div>
+                    <div class="col-lg-3 col-lg-pull-9 col-md-3 col-md-pull-9 col-sm-12 col-xs-12 smt-40 xmt-40">
+                        <div class="htc__product__leftsidebar">
+                            <!-- Start Prize Range -->
+                            <div class="htc-grid-range">
+                                <h4 class="title__line--4">Giá</h4>
+                                <div class="content-shopby">
+                                    <div class="price_filter s-filter clear">
+                                        <form action="#" method="GET">
+                                            <div id="slider-range"></div>
+                                            <div class="slider__range--output">
+                                                <div class="price__output--wrap">
+                                                    <div class="price--output">
+                                                        <span>Giá :</span><input type="text" id="amount" readonly>
+                                                    </div>
+                                                    <div class="price--filter">
+                                                        <a href="#">Lọc</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Prize Range -->
+                            <!-- Start Category Area -->
+                            <div class="htc__category">
+                                <h4 class="title__line--4">Danh mục</h4>
+                                <ul class="ht__cat__list" id="cateMenu">
+                                </ul>
+                            </div>
+                            <!-- End Category Area -->
+                            <!-- Start Best Sell Area -->
+                            <div class="htc__recent__product">
+                                <h2 class="title__line--4">Sản phẩm bán chạy</h2>
+                                <div class="htc__recent__product__inner" id="SPbanchay">
+                                    <!-- Start Single Product -->
+                                    <div class="htc__best__product">
+                                        <div class="htc__best__pro__thumb">
+                                            <a href="product-details.html">
+                                                <img src="../../src/assets/client/images/product-2/sm-smg/1.jpg" alt="small product">
+                                            </a>
+                                        </div>
+                                        <div class="htc__best__product__details">
+                                            <h2><a href="product-details.html">Product Title Here</a></h2>
+                                            <ul class="rating">
+                                                <li><i class="icon-star icons"></i></li>
+                                                <li><i class="icon-star icons"></i></li>
+                                                <li><i class="icon-star icons"></i></li>
+                                                <li class="old"><i class="icon-star icons"></i></li>
+                                                <li class="old"><i class="icon-star icons"></i></li>
+                                            </ul>
+                                            <ul class="pro__prize">
+                                                <li class="old__prize">$82.5</li>
+                                                <li>$75.2</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- End Single Product -->
+                                </div>
+                            </div>
+                            <!-- End Best Sell Area -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Product Grid -->
+        <!-- Start Brand Area -->
+        <div class="htc__brand__area bg__cat--4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="ht__brand__inner">
+                            <ul class="brand__list owl-carousel clearfix">
+                                <li><a href="#"><img src="../../src/assets/client/images/brand/1.png" alt="brand images"></a></li>
+                                <li><a href="#"><img src="../../src/assets/client/images/brand/2.png" alt="brand images"></a></li>
+                                <li><a href="#"><img src="../../src/assets/client/images/brand/3.png" alt="brand images"></a></li>
+                                <li><a href="#"><img src="../../src/assets/client/images/brand/4.png" alt="brand images"></a></li>
+                                <li><a href="#"><img src="../../src/assets/client/images/brand/5.png" alt="brand images"></a></li>
+                                <li><a href="#"><img src="../../src/assets/client/images/brand/5.png" alt="brand images"></a></li>
+                                <li><a href="#"><img src="../../src/assets/client/images/brand/1.png" alt="brand images"></a></li>
+                                <li><a href="#"><img src="../../src/assets/client/images/brand/2.png" alt="brand images"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Brand Area -->
+        <!-- Start Banner Area -->
+        <div class="htc__banner__area">
+            <ul class="banner__list owl-carousel owl-theme clearfix">
+                <li><a href="product-details.html"><img src="../../src/assets/client/images/banner/bn-3/1.jpg" alt="banner images"></a></li>
+                <li><a href="product-details.html"><img src="../../src/assets/client/images/banner/bn-3/2.jpg" alt="banner images"></a></li>
+                <li><a href="product-details.html"><img src="../../src/assets/client/images/banner/bn-3/3.jpg" alt="banner images"></a></li>
+                <li><a href="product-details.html"><img src="../../src/assets/client/images/banner/bn-3/4.jpg" alt="banner images"></a></li>
+                <li><a href="product-details.html"><img src="../../src/assets/client/images/banner/bn-3/5.jpg" alt="banner images"></a></li>
+                <li><a href="product-details.html"><img src="../../src/assets/client/images/banner/bn-3/6.jpg" alt="banner images"></a></li>
+                <li><a href="product-details.html"><img src="../../src/assets/client/images/banner/bn-3/1.jpg" alt="banner images"></a></li>
+                <li><a href="product-details.html"><img src="../../src/assets/client/images/banner/bn-3/2.jpg" alt="banner images"></a></li>
+            </ul>
+        </div>
+        <!-- End Banner Area -->
+        <!-- End Banner Area -->
+        <!-- Start Footer Area -->
+        <footer id="htc__footer">
+            <!-- Start Footer Widget -->
+            <div class="footer__container bg__cat--1">
+                <div class="container">
+                    <div class="row">
+                        <!-- Start Single Footer Widget -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer">
+                                <h2 class="title__line--2">ABOUT US</h2>
+                                <div class="ft__details">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim</p>
+                                    <div class="ft__social__link">
+                                        <ul class="social__link">
+                                            <li><a href="#"><i class="icon-social-twitter icons"></i></a></li>
+
+                                            <li><a href="#"><i class="icon-social-instagram icons"></i></a></li>
+
+                                            <li><a href="#"><i class="icon-social-facebook icons"></i></a></li>
+
+                                            <li><a href="#"><i class="icon-social-google icons"></i></a></li>
+
+                                            <li><a href="#"><i class="icon-social-linkedin icons"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Footer Widget -->
+                        <!-- Start Single Footer Widget -->
+                        <div class="col-md-2 col-sm-6 col-xs-12 xmt-40">
+                            <div class="footer">
+                                <h2 class="title__line--2">information</h2>
+                                <div class="ft__inner">
+                                    <ul class="ft__list">
+                                        <li><a href="#">About us</a></li>
+                                        <li><a href="#">Delivery Information</a></li>
+                                        <li><a href="#">Privacy & Policy</a></li>
+                                        <li><a href="#">Terms & Condition</a></li>
+                                        <li><a href="#">Manufactures</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Footer Widget -->
+                        <!-- Start Single Footer Widget -->
+                        <div class="col-md-2 col-sm-6 col-xs-12 xmt-40 smt-40">
+                            <div class="footer">
+                                <h2 class="title__line--2">my account</h2>
+                                <div class="ft__inner">
+                                    <ul class="ft__list">
+                                        <li><a href="#">My Account</a></li>
+                                        <li><a href="cart.html">My Cart</a></li>
+                                        <li><a href="#">Login</a></li>
+                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                        <li><a href="checkout.html">Checkout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Footer Widget -->
+                        <!-- Start Single Footer Widget -->
+                        <div class="col-md-2 col-sm-6 col-xs-12 xmt-40 smt-40">
+                            <div class="footer">
+                                <h2 class="title__line--2">Our service</h2>
+                                <div class="ft__inner">
+                                    <ul class="ft__list">
+                                        <li><a href="#">My Account</a></li>
+                                        <li><a href="cart.html">My Cart</a></li>
+                                        <li><a href="#">Login</a></li>
+                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                        <li><a href="checkout.html">Checkout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Footer Widget -->
+                        <!-- Start Single Footer Widget -->
+                        <div class="col-md-3 col-sm-6 col-xs-12 xmt-40 smt-40">
+                            <div class="footer">
+                                <h2 class="title__line--2">NEWSLETTER </h2>
+                                <div class="ft__inner">
+                                    <div class="news__input">
+                                        <input type="text" placeholder="Your Mail*">
+                                        <div class="send__btn">
+                                            <a class="fr__btn" href="#">Send Mail</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Footer Widget -->
+                    </div>
+                </div>
+            </div>
+            <!-- End Footer Widget -->
+            <!-- Start Copyright Area -->
+            <div class="htc__copyright bg__cat--5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="copyright__inner">
+                                <p>Copyright© <a href="https://freethemescloud.com/">Free themes Cloud</a> 2018. All
+                                    right reserved.</p>
+                                <a href="#"><img src="../../src/assets/client/images/others/shape/paypol.png" alt="payment images"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Copyright Area -->
+        </footer>
+        <!-- End Footer Style -->
+    </div>
+    <!-- Body main wrapper end -->
+
+    <!-- Placed js at the end of the document so the pages load faster -->
+
+    <!-- jquery latest version -->
+    <script src="../../src/assets/client/js/vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap framework js -->
+    <script src="../../src/assets/client/js/bootstrap.min.js"></script>
+    <!-- All js plugins included in this file. -->
+    <script src="../../src/assets/client/js/plugins.js"></script>
+    <script src="../../src/assets/client/js/slick.min.js"></script>
+    <script src="../../src/assets/client/js/owl.carousel.min.js"></script>
+    <!-- Waypoints.min.js. -->
+    <script src="../../src/assets/client/js/waypoints.min.js"></script>
+    <!-- Main js file that contents all jQuery plugins activation. -->
+    <script src="../../src/assets/client/js/main.js"></script>
+
+
+    <script>
+        // productCate
+        let params = new URLSearchParams(location.search);
+        var id = params.get("id");
+        var search = params.get("search");
+        if (id != null) {
+            console.log("ID");
+            relatedProducts();
+        }
+        else if (search != null) {
+            console.log("search: " + search);
+            productSearch();
+        }
+        else {
+            console.log("GRID");
+            showAllProduc();
+        }
+
+        function relatedProducts() {
+            urlRelated = `http://localhost:3500/products?categorieId=${id}`;
+            fetch(urlRelated).then(res => res.json())
+                .then(productRelateds => {
+                    productRelated = productRelateds.map(related => {
+                        return `<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                                            <div class="category">
+                                                <div class="ht__cat__thumb">
+                                                    <a href="product-details.html?id=${related.id}">
+                                                        <img src="${related.image}" alt="product images">
+                                                    </a>
+                                                </div>
+                                                <div class="fr__hover__info">
+                                                    <ul class="product__action">
+                                                        <li><a href="wishlist.html"><i class="icon-heart icons"></i></a>
+                                                        </li>
+
+                                                        <li onclick="addCart(${related.id},'${related.name}',${related.price},'${related.image}')"><a ><i class="icon-handbag icons"></i></a>
+                                                        </li>
+
+                                                        <li><a href="#"><i class="icon-shuffle icons"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="fr__product__inner">
+                                                    <h4><a href="product-details.html?id=${related.id}">${related.name}</a></h4>
+                                                    <ul class="fr__pro__prize">
+                                                        <li>${formatVND(related.price)}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>`;
+                    });
+                    document.getElementById("numProducts").innerHTML = productRelateds.length;
+                    document.querySelector(".productCate").innerHTML = productRelated.join("");
+                });
+        }
+
+        function productSearch() {
+            urlRelated = `http://localhost:3500/products?name_like=${search.trim()}`;
+            fetch(urlRelated).then(res => res.json())
+                .then(productRelateds => {
+                    productRelated = productRelateds.map(related => {
+                        return `<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                                            <div class="category">
+                                                <div class="ht__cat__thumb">
+                                                    <a href="product-details.html?id=${related.id}">
+                                                        <img src="${related.image}" alt="product images">
+                                                    </a>
+                                                </div>
+                                                <div class="fr__hover__info">
+                                                    <ul class="product__action">
+                                                        <li><a href="wishlist.html"><i class="icon-heart icons"></i></a>
+                                                        </li>
+
+                                                        <li onclick="addCart(${related.id},'${related.name}',${related.price},'${related.image}')"><a ><i class="icon-handbag icons"></i></a>
+                                                        </li>
+
+                                                        <li><a href="#"><i class="icon-shuffle icons"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="fr__product__inner">
+                                                    <h4><a href="product-details.html?id=${related.id}">${related.name}</a></h4>
+                                                    <ul class="fr__pro__prize">
+                                                        <li>${formatVND(related.price)}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>`;
+                    });
+                    document.getElementById("numProducts").innerHTML = productRelateds.length;
+                    document.querySelector(".productCate").innerHTML = productRelated.join("");
+                });
+        }
+
+        function showAllProduc() {
+            urlRelated = `http://localhost:3500/products`;
+            fetch(urlRelated).then(res => res.json())
+                .then(productRelateds => {
+                    productRelated = productRelateds.map(related => {
+                        return `<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                                            <div class="category">
+                                                <div class="ht__cat__thumb">
+                                                    <a href="product-details.html?id=${related.id}">
+                                                        <img src="${related.image}" alt="product images">
+                                                    </a>
+                                                </div>
+                                                <div class="fr__hover__info">
+                                                    <ul class="product__action">
+                                                        <li><a href="wishlist.html"><i class="icon-heart icons"></i></a>
+                                                        </li>
+
+                                                        <li onclick="addCart(${related.id},'${related.name}',${related.price},'${related.image}')"><a ><i class="icon-handbag icons"></i></a>
+                                                        </li>
+
+                                                        <li><a href="#"><i class="icon-shuffle icons"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="fr__product__inner">
+                                                    <h4><a href="product-details.html?id=${related.id}">${related.name}</a></h4>
+                                                    <ul class="fr__pro__prize">
+                                                        <li>${formatVND(related.price)}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>`;
+                    });
+                    document.querySelector(".productCate").innerHTML = productRelated.join("");
+                    document.getElementById("numProducts").innerHTML = productRelateds.length;
+                });
+        }
+
+        function sortBy(acction) {
+            if (acction.value === "Mặc định") {
+                alert("Mặc định")
+            }
+            if (acction.value === "Lọc theo giá thấp - cao") {
+                alert("Lọc theo giá thấp - cao")
+            }
+            if (acction.value === "Lọc theo giá cao - thấp") {
+                alert("Lọc theo giá cao - thấp")
+            }
+            if (acction.value === "Lọc theo ngày nhập") {
+                alert("Lọc theo ngày nhập")
+            }
+        }
+
+
+
+
+        // Lấy ra tên danh mục
+        function getNameCate() {
+            url = `http://localhost:3500/categories/${id}`;
+            fetch(url).then(res => res.json())
+                .then(nameCate => {
+                    if (id != null) {
+                        document.getElementById("nameCateTitle").innerHTML = nameCate.name;
+                        document.getElementById("name_title").innerHTML = nameCate.name;
+
+                    }
+                    else if (search != null) {
+                        document.getElementById("nameCateTitle").innerHTML = search;
+                        document.getElementById("name_title").innerHTML = "Tìm kiếm: " + search;
+                    }
+                    else {
+                        document.getElementById("nameCateTitle").innerHTML = "Tất cả các sản phẩm";
+                        document.getElementById("name_title").innerHTML = "Tất cả các sản phẩm";
+                    }
+                })
+        }
+
+        getNameCate();
+
+        function getProductBest() {
+            var url = "http://localhost:3500/order_details?_expand=product&_limit=4";
+            fetch(url).then(data => data.json())
+                .then(products => {
+                    product = products.map(product => {
+                        return (`<div class="htc__best__product">
+                                        <div class="htc__best__pro__thumb">
+                                            <a href="product-details.html">
+                                                <img src="${product.product.image}" alt="small product">
+                                            </a>
+                                        </div>
+                                        <div class="htc__best__product__details">
+                                            <h2><a href="product-details.html">${product.product.name}</a></h2>
+                                            <ul class="pro__prize">
+                                                <li>${formatVND(product.product.price)}</li>
+                                            </ul>
+                                        </div>
+                                    </div>`);
+                    })
+                    document.querySelector("#SPbanchay").innerHTML = product.join("");
+                });
+        }
+        getProductBest();
+
+    </script>
+</body>
+
+</html>

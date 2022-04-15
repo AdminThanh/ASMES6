@@ -3477,7 +3477,7 @@ ul.htc__instagram__posts.owl-carousel li img {
   font-weight: 600;
 }
 .order-details .order-details__count .order-details__count__single span.price {
-  width: 30%;
+  width: 35%;
   text-align: left;
   font-weight: 600;
   font-family: "Poppins";
@@ -3501,7 +3501,8 @@ ul.htc__instagram__posts.owl-carousel li img {
   font-weight: 700;
 }
 .order-details .ordre-details__total span.price {
-  width: 30%;
+  /* width: 30%; */
+  width: 40%;
   text-align: left;
   font-weight: 700;
   font-family: "Poppins";

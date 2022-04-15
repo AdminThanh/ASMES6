@@ -1,4 +1,5 @@
 import { getAllCategory, deleteCategory } from "./models/category.model.js";
+import { getData } from "./models/product.model.js";
 import Shared from "./main.js";
 
 const cateShared = new Shared();
@@ -21,7 +22,7 @@ const actCate = async () => {
             <td>
                 <div class="d-flex align-items-center list-action">
                     <a class="badge bg-success mr-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sửa"
-                        href="page-edit-category.html?key=${key}"><i class="ri-pencil-line mr-0"></i></a>
+                        href="page-edit-category?key=${key}"><i class="ri-pencil-line mr-0"></i></a>
                     <a data-key="${key}" class="delCategory hover badge bg-warning mr-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Xóa" ><i class="ri-delete-bin-line mr-0"></i></a>
                 </div>
             </td>
@@ -45,14 +46,19 @@ if (listCategory) {
 const list_category = document.querySelector("#list_category");
 
 const getMenuCate = async () => {
-    await cateShared.render(
-        list_category,
-        getAllCategory,
-        ({ name, id }, key) => {
-            return `<li><a href="product-grid.html?id=${id}">${name}</a></li>`;
-        },
-    );
-}
+        const data = await getData(
+            "https://asmfull-6ff42-default-rtdb.firebaseio.com/categories.json"
+        );
+        const html = Object.keys(data)
+            .map((key) => {
+                if (data[key] === null) return "";
+                const cate = data[key];
+                return `<li><a href="product-grid?keyCate=${cate.id}">${cate.name}</a></li>`;
+            })
+            .join("");
+
+            list_category.innerHTML = html;
+};
 if (list_category) {
     getMenuCate()
 }

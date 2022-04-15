@@ -465,7 +465,7 @@
                                         <th></th>
                                     </tr>
                                 </thead>
-                                <tbody class="ligth-body" id="listOrder">
+                                <tbody class="ligth-body" id="listOrderEdit">
                                     <!-- ==========LIST ORDER=========== -->
                                     <tr>
                                         <td>
@@ -575,79 +575,6 @@
 
     <!-- app JavaScript -->
     <script src="../assets/admin/js/app.js"></script>
-    <script>
-
-        // LẤY DANH SÁCH SẢN PHẨM
-        // var urlOrders = "http://localhost:3500/order_details?_expand=order";
-        let params = new URLSearchParams(location.search);
-        let id = params.get("id");
-
-        var urlOrders = `http://localhost:3500/orders/${id}`;
-        function getOrder() {
-            fetch(urlOrders).then(data => data.json())
-                .then(orders => {
-                    document.querySelector(".customer_name").innerHTML = orders.customer_name;
-                    document.querySelector(".customer_address").innerHTML = orders.customer_address;
-                    document.querySelector(".customer_phone_number").innerHTML = orders.customer_phone_number;
-                    document.querySelector(".created_date").innerHTML = orders.created_date;
-                    var status = document.querySelector(".status");
-
-                    if (orders.status == "Đã nhận") {
-                        var option = `<option value="Đang xác nhận">Đang xác nhận</option>
-                        <option value="Đang giao">Đang giao</option>
-                        <option value="Đã nhận" selected >Đã nhận</option>
-                        <option value="Đã hủy">Đã hủy</option>`;
-                        status.innerHTML = option;
-                    }
-                    if (orders.status == "Đang xác nhận") {
-                        var option = `<option value="Đang xác nhận" selected>Đang xác nhận</option>
-                        <option value="Đang giao">Đang giao</option>
-                        <option value="Đã nhận" >Đã nhận</option>
-                        <option value="Đã hủy">Đã hủy</option>`;
-                        status.innerHTML = option;
-                    }
-                    if (orders.status == "Đang giao") {
-                        var option = `<option value="Đang xác nhận">Đang xác nhận</option>
-                        <option value="Đang giao" selected>Đang giao</option>
-                        <option value="Đã nhận">Đã nhận</option>
-                        <option value="Đã hủy">Đã hủy</option>`;
-                        status.innerHTML = option;
-                    }
-                    if (orders.status == "Đã hủy") {
-                        var option = `<option value="Đang xác nhận">Đang xác nhận</option>
-                        <option value="Đang giao">Đang giao</option>
-                        <option value="Đã nhận">Đã nhận</option>
-                        <option value="Đã hủy" selected>Đã hủy</option>`;
-                        status.innerHTML = option;
-                    }
-                });
-        }
-        getOrder();
-
-        // sửa status
-        var btnEditOrder = document.querySelector("#btnEditOrder");
-        btnEditOrder.onclick = () => {
-            listOrder = {
-                status: document.querySelector("#status").value.trim()
-            }
-            options = {
-                method: "PATCH",
-                body: JSON.stringify(listOrder),
-                headers: { 'Content-Type': 'application/json' }
-            }
-            fetch(urlOrders, options).then(res => res.json())
-                .then(data => {
-                    alert("Đã sửa thành công");
-                    // history.back();
-                })
-        }
-
-        // Cắt bớt chữ
-        function truncate(text) {
-            return text.slice(0, 50) + "...";
-        }
-
-    </script>
 </body>
 
 </html>

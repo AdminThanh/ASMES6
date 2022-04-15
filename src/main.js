@@ -1,5 +1,6 @@
 import "toastify-js/src/toastify.css"
 import Toastify from "toastify-js"
+
 export default class Shared {
   render = async (target, promiseFireBase, callback, additionalRender = '') => {
     const res = await promiseFireBase();
@@ -42,5 +43,26 @@ export default class Shared {
       onClick: function () { },
     }).showToast();
   };
+
+}
+
+
+export class Cart {
+  constructor() {
+    this.cartStore = JSON.parse(localStorage.getItem("cart")) || [];
+  }
+
+  getCart() {
+    return this.cartStore;
+  }
+
+  getTotal() {
+    return this.cartStore.reduce((acc, cur, index) => {
+      return acc + cur.price * cur.quantity;
+    }, 0);
+  }
+  clearCart(){
+    localStorage.removeItem("cart");
+  }
 
 }

@@ -1,4 +1,4 @@
-import { getAllProduct, deleteProduct, getProductNew, getProductTop } from "./models/product.model.js";
+import { getAllProduct, deleteProduct, getProductNew, getProductTop, getData } from "./models/product.model.js";
 import Shared from "./main.js";
 
 const productShared = new Shared();
@@ -29,7 +29,7 @@ const action = async () => {
     <td>
         <div class="d-flex align-items-center list-action">
             <a class="badge bg-success mr-2" data-toggle="tooltip"
-                data-placement="top" title="" data-original-title="Sửa" href="page-edit-product.html?id=${key}"><i
+                data-placement="top" title="" data-original-title="Sửa" href="page-edit-product?id=${key}"><i
                     class="ri-pencil-line mr-0"></i></a>
             <a data-key="${key}" class="deleteProduct badge bg-warning mr-2" data-toggle="tooltip"
                 data-placement="top" title="" data-original-title="Xóa"><i
@@ -64,7 +64,7 @@ const actGetProductNew = () => {
             return `<div class="col-md-4 col-lg-3 col-sm-4 col-xs-12">
             <div class="category">
                 <div class="ht__cat__thumb">
-                    <a href="product-details.html?keyProduct=${id}">
+                    <a href="product-details?keyProduct=${key}">
                         <img src="${image}" alt="product images">
                     </a>
                 </div>
@@ -102,7 +102,7 @@ const actGetProductTop = () => {
             return `<div class="col-md-4 col-lg-3 col-sm-4 col-xs-12">
             <div class="category">
                 <div class="ht__cat__thumb">
-                    <a href="product-details.html?keyProduct=${id}">
+                    <a href="product-details?keyProduct=${key}">
                         <img src="${image}" alt="product images">
                     </a>
                 </div>

@@ -41,7 +41,9 @@ Index Of Script
 ------------------------------------------------
 Index Of Script
 ----------------------------------------------*/
-
+function formatVND(price) {
+  return String(price).replace(/(.)(?=(\d{3})+$)/g, '$1.') + " VNĐ";
+}
 (function (jQuery) {
   "use strict";
 

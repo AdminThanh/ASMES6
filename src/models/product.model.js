@@ -1,3 +1,4 @@
+import { async } from "@firebase/util";
 import { getDatabase, ref, get, child, set, push, update, remove } from "firebase/database";
 import database, { dbRef } from "../db.js"
 
@@ -81,4 +82,14 @@ export const getProductId = (key) => {
     });
 }
 
+export const getProductCateId = async (categorieId) => {
+  const dataSnapshot = await get(
+    query(child(dbRef, `products`), orderByChild("categorieId"), equalTo(categorieId))
+  );
+  return dataSnapshot;
+};
 
+export async function getData(url) {
+  const res = await fetch(url);
+  return res.json();
+}

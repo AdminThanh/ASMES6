@@ -467,7 +467,7 @@ function viewCart() {
     });
 }
 
-viewCart();
+// viewCart();
 
 function cartLeft() {
     var cart_left = document.getElementsByClassName('shp__price');
@@ -479,7 +479,7 @@ function cartLeft() {
     }
     document.getElementById('total__price').innerHTML = formatVND(tongLeft);
 }
-cartLeft();
+// cartLeft();
 
 
 // XÓA CART ITEM
@@ -495,22 +495,3 @@ function deteleCart(element, index) {
     viewCart();
     cartLeft()
 }
-
-
-
-// LẤY RA DANH MỤC
-function getCategory() {
-    urlCategorys = 'http://localhost:3500/categories';
-    fetch(urlCategorys).then(data => data.json())
-        .then(categorys => {
-            category = categorys.map(cate => {
-                return (`<li><a href="product-grid.html?id=${cate.id}">${cate.name}</a></li>`);
-            })
-            document.querySelector("#list_category").innerHTML = remove_commas(category);
-            var catemenu = document.querySelector("#cateMenu");
-            if (catemenu) {
-                catemenu.innerHTML = remove_commas(category);
-            }
-        });
-}
-// getCategory();

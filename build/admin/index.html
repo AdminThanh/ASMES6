@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../assets/admin/vendor/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../assets/admin/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css">
     <link rel="stylesheet" href="../assets/admin/vendor/remixicon/fonts/remixicon.css">
-<script defer src="../script/index_bundle.min.js"></script><script defer src="../script/vendors-node_modules_firebase_app_dist_index_esm_js-node_modules_firebase_database_dist_index-dcdcda_bundle.min.js"></script><script defer src="../script/product_bundle.min.js"></script><script defer src="../script/addProduct_bundle.min.js"></script><script defer src="../script/editProduct_bundle.min.js"></script><script defer src="../script/category_bundle.min.js"></script><script defer src="../script/addCategory_bundle.min.js"></script><script defer src="../script/editCategory_bundle.min.js"></script><script defer src="../script/detailProduct_bundle.min.js"></script></head>
+<script defer src="../script/vendors-node_modules_firebase_app_dist_index_esm_js-node_modules_firebase_database_dist_index-dcdcda_bundle.min.js"></script><script defer src="../script/main_bundle.min.js"></script></head>
 
 <body class="">
     <!-- Wrapper Start -->
@@ -66,12 +66,12 @@
                             </a>
                             <ul id="product" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                                 <li class="">
-                                    <a href="page-list-product.html">
+                                    <a href="./admin/page-list-product.html">
                                         <i class="las la-minus"></i><span>DS sản phẩm</span>
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="page-add-product.html">
+                                    <a href="./admin/page-add-product.html">
                                         <i class="las la-minus"></i><span>Thêm sản phẩm</span>
                                     </a>
                                 </li>
@@ -97,12 +97,12 @@
                             </a>
                             <ul id="category" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                                 <li class="">
-                                    <a href="page-list-category.html">
+                                    <a href="./admin/page-list-category.html">
                                         <i class="las la-minus"></i><span>DS Danh mục</span>
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="page-add-category.html">
+                                    <a href="./admin/page-add-category.html">
                                         <i class="las la-minus"></i><span>Thêm danh mục</span>
                                     </a>
                                 </li>
@@ -128,7 +128,7 @@
                             </a>
                             <ul id="sale" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                                 <li class="">
-                                    <a href="page-list-order.html">
+                                    <a href="./admin/page-list-order.html">
                                         <i class="las la-minus"></i><span>DS đơn hàng</span>
                                     </a>
                                 </li>
@@ -143,9 +143,9 @@
                 <nav class="navbar navbar-expand-lg navbar-light p-0">
                     <div class="iq-navbar-logo d-flex align-items-center justify-content-between">
                         <i class="ri-menu-line wrapper-menu"></i>
-                        <a href="index.html" class="header-logo">
+                        <a href="admin" class="header-logo">
                             <img src="../assets/admin/images/logo.png" class="img-fluid rounded-normal" alt="logo">
-                            <h5 class="logo-title ml-3">POSDash</h5>
+                            <h5 class="logo-title ml-3">MetaChair</h5>
 
                         </a>
                     </div>
@@ -390,14 +390,15 @@
                                 <li class="nav-item nav-icon dropdown caption-content">
                                     <a href="#" class="search-toggle dropdown-toggle" id="dropdownMenuButton4"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <img src="../assets/admin/images/user/1.png" class="img-fluid rounded" alt="user">
+                                        <img src="../assets/admin/images/user/1.png" class="img-fluid rounded"
+                                            alt="user">
                                     </a>
                                     <div class="iq-sub-dropdown dropdown-menu" aria-labelledby="dropdownMenuButton">
                                         <div class="card shadow-none m-0">
                                             <div class="card-body p-0 text-center">
                                                 <div class="media-body profile-detail text-center">
-                                                    <img src="../assets/admin/images/page-img/profile-bg.jpg" alt="profile-bg"
-                                                        class="rounded-top img-fluid mb-4">
+                                                    <img src="../assets/admin/images/./admin/page-img/profile-bg.jpg"
+                                                        alt="profile-bg" class="rounded-top img-fluid mb-4">
                                                     <img src="../assets/admin/images/user/1.png" alt="profile-img"
                                                         class="rounded profile-img img-fluid avatar-70">
                                                 </div>
@@ -453,7 +454,8 @@
                                     <div class="card-body">
                                         <div class="d-flex align-items-center mb-4 card-total-sale">
                                             <div class="icon iq-icon-box-2 bg-info-light">
-                                                <img src="../assets/admin/images/product/1.png" class="img-fluid" alt="image">
+                                                <img src="../assets/admin/images/product/1.png" class="img-fluid"
+                                                    alt="image">
                                             </div>
                                             <div>
                                                 <p class="mb-2">Danh mục</p>
@@ -472,7 +474,8 @@
                                     <div class="card-body">
                                         <div class="d-flex align-items-center mb-4 card-total-sale">
                                             <div class="icon iq-icon-box-2 bg-danger-light">
-                                                <img src="../assets/admin/images/product/2.png" class="img-fluid" alt="image">
+                                                <img src="../assets/admin/images/product/2.png" class="img-fluid"
+                                                    alt="image">
                                             </div>
                                             <div>
                                                 <p class="mb-2">Sản phẩm</p>
@@ -491,7 +494,8 @@
                                     <div class="card-body">
                                         <div class="d-flex align-items-center mb-4 card-total-sale">
                                             <div class="icon iq-icon-box-2 bg-success-light">
-                                                <img src="../assets/admin/images/product/3.png" class="img-fluid" alt="image">
+                                                <img src="../assets/admin/images/product/3.png" class="img-fluid"
+                                                    alt="image">
                                             </div>
                                             <div>
                                                 <p class="mb-2">Đơn hàng</p>
@@ -510,7 +514,8 @@
                                     <div class="card-body">
                                         <div class="d-flex align-items-center mb-4 card-total-sale">
                                             <div class="icon iq-icon-box-2 bg-success-light">
-                                                <img src="../assets/admin/images/product/05.png" class="img-fluid" alt="image">
+                                                <img src="../assets/admin/images/product/05.png" class="img-fluid"
+                                                    alt="image">
                                             </div>
                                             <div>
                                                 <p class="mb-2">Doanh thu</p>
@@ -526,57 +531,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-12 mt-2">
-                        <h3>Đơn hàng</h3>
-                        <div class="table-responsive rounded mb-3">
-                            <table class="table mb-0 tbl-server-info">
-                                <thead class="bg-white text-uppercase">
-                                    <tr class="ligth ligth-data">
-                                        <th>
-                                            <div class="checkbox d-inline-block">
-                                                <input type="checkbox" class="checkbox-input" id="checkbox1">
-                                                <label for="checkbox1" class="mb-0"></label>
-                                            </div>
-                                        </th>
-                                        <th>Tên</th>
-                                        <th>Số điện thoại</th>
-                                        <th>Địa chỉ</th>
-                                        <th>Email</th>
-                                        <th>Ngày đặt</th>
-                                        <th>Trạng thái</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody class="ligth-body" id="DSdonhang">
-                                    <!-- <tr>
-                                        <td>
-                                            <div class="checkbox d-inline-block">
-                                                <input type="checkbox" class="checkbox-input" id="checkbox2">
-                                                <label for="checkbox2" class="mb-0"></label>
-                                            </div>
-                                        </td>
-                                        <td>Nguyễn Đăng Thành</td>
-                                        <td>0387578520</td>
-                                        <td>Cổ Lũy ,Hải Ba, Hải Lăng, Quảng Trị</td>
-                                        <td>thanhboi@gmail.com</td>
-                                        <td>2022-12-01</td>
-                                        <td>
-                                            <div class="badge badge-warning">Đã hủy</div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center list-action">
-                                                <a class="badge badge-info mr-2" data-toggle="tooltip"
-                                                    data-placement="top" title="" data-original-title="View"
-                                                    href="page-list-order.html"><i class="ri-eye-line mr-0"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr> -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
                 </div>
                 <!-- Page end  -->
             </div>
@@ -590,14 +544,14 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><a href="privacy-policy.html">Privacy Policy</a></li>
-                                <li class="list-inline-item"><a href="terms-of-service.html">Terms of Use</a></li>
+                                <li class="list-inline-item"><a href="privacy-policy.html">Bản quyền thuộc về ThanhF</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="col-lg-6 text-right">
                             <span class="mr-1">
                                 <script>document.write(new Date().getFullYear())</script>©
-                            </span> <a href="#" class="">POS Dash</a>.
+                            </span> <a href="#" class="">ThanhF</a>.
                         </div>
                     </div>
                 </div>
@@ -618,7 +572,6 @@
 
     <!-- app JavaScript -->
     <script src="../assets/admin/js/app.js"></script>
-    <script src="../../src/dashboard.js"></script>
 </body>
 
 </html>

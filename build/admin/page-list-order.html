@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../assets/admin/vendor/remixicon/fonts/remixicon.css">
 <script defer src="../script/vendors-node_modules_firebase_app_dist_index_esm_js-node_modules_firebase_database_dist_index-dcdcda_bundle.min.js"></script><script defer src="../script/main_bundle.min.js"></script></head>
 
-<body class="  ">
+<body class="">
     <!-- Wrapper Start -->
     <div class="wrapper">
         <div class="iq-sidebar  sidebar-default ">
@@ -78,7 +78,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="active">
+                        <li class=" ">
                             <a href="#category" class="collapsed" data-toggle="collapse" aria-expanded="false">
                                 <svg class="svg-icon" id="p-dash3" width="20" height="20"
                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -128,7 +128,7 @@
                                 </svg>
                             </a>
                             <ul id="sale" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                                <li class="">
+                                <li class="active">
                                     <a href="page-list-order.html">
                                         <i class="las la-minus"></i><span>DS đơn hàng</span>
                                     </a>
@@ -146,7 +146,7 @@
                         <i class="ri-menu-line wrapper-menu"></i>
                         <a href="index.html" class="header-logo">
                             <img src="../assets/admin/images/logo.png" class="img-fluid rounded-normal" alt="logo">
-                            <h5 class="logo-title ml-3">MetaChair</h5>
+                            <h5 class="logo-title ml-3">Thanh</h5>
 
                         </a>
                     </div>
@@ -157,18 +157,6 @@
                         </form>
                     </div>
                     <div class="d-flex align-items-center">
-                        <!--<div class="change-mode">
-                          <div class="custom-control custom-switch custom-switch-icon custom-control-inline">
-                              <div class="custom-switch-inner">
-                                  <p class="mb-0"> </p>
-                                  <input type="checkbox" class="custom-control-input" id="dark-mode" data-active="true">
-                                  <label class="custom-control-label" for="dark-mode" data-mode="toggle">
-                                      <span class="switch-icon-left"><i class="a-left ri-moon-clear-line"></i></span>
-                                      <span class="switch-icon-right"><i class="a-right ri-sun-line"></i></span>
-                                  </label>
-                              </div>
-                          </div>
-                      </div>-->
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-label="Toggle navigation">
@@ -445,45 +433,79 @@
             </div>
         </div>
         <div class="content-page">
-            <div class="container-fluid add-form-list">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="card">
-                            <div class="card-header d-flex justify-content-between">
-                                <div class="header-title">
-                                    <h4 class="card-title">Sửa danh mục</h4>
-                                </div>
+                    <div class="col-lg-12">
+                        <div class="d-flex flex-wrap flex-wrap align-items-center justify-content-between mb-4">
+                            <div>
+                                <h4 class="mb-3">Danh sách đơn hàng</h4>
                             </div>
-                            <div class="card-body">
-                                <form data-toggle="validator" onsubmit="false">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Mã danh mục *</label>
-                                                <input id="idCate" type="text" class="form-control"
-                                                    placeholder="Nhập mã danh mục" required>
-                                                <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="table-responsive rounded mb-3">
+                            <table class="data-table table mb-0 tbl-server-info">
+                                <thead class="bg-white text-uppercase">
+                                    <tr class="ligth ligth-data">
+                                        <th>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox1">
+                                                <label for="checkbox1" class="mb-0"></label>
                                             </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Tên danh mục *</label>
-                                                <input id="nameCate" type="text" class="form-control"
-                                                    placeholder="Nhập tên danh mục" required>
-                                                <div class="help-block with-errors"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button id="btnEditCategory" class="btn btn-primary mr-2">Sửa danh
-                                        mục</button>
-                                    <button onclick="history.back()" type="reset" class="btn btn-danger">Quay
-                                        lại</button>
-                                </form>
-                            </div>
+                                        </th>
+                                        <th>Họ tên</th>
+                                        <th>Số điện thoại</th>
+                                        <th>Địa chỉ nhận</th>
+                                        <!-- <th>Số lượng</th> -->
+                                        <th>Ngày đặt</th>
+                                        <th>Trạng thái</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="ligth-body" id="listOrder">
+                                    <!-- ==========LIST ORDER=========== -->
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
                 <!-- Page end  -->
+            </div>
+            <!-- Modal Edit -->
+            <div class="modal fade" id="edit-note" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="popup text-left">
+                                <div class="media align-items-top justify-content-between">
+                                    <h3 class="mb-3">Sản phẩm</h3>
+                                    <div class="btn-cancel p-0" data-dismiss="modal"><i class="las la-times"></i></div>
+                                </div>
+                                <div class="content edit-notes">
+                                    <div class="card card-transparent card-block card-stretch event-note mb-0">
+                                        <div class="card-body px-0 bukmark">
+                                            <div
+                                                class="d-flex align-items-center justify-content-between pb-2 mb-3 border-bottom">
+                                                <div class="quill-tool">
+                                                </div>
+                                            </div>
+                                            <div id="quill-toolbar1">
+                                                <p>Virtual Digital Marketing Course every week on Monday, Wednesday and
+                                                    Saturday.Virtual Digital Marketing Course every week on Monday</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer border-0">
+                                            <div class="d-flex flex-wrap align-items-ceter justify-content-end">
+                                                <div class="btn btn-primary mr-3" data-dismiss="modal">Cancel</div>
+                                                <div class="btn btn-outline-primary" data-dismiss="modal">Save</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -520,11 +542,10 @@
 
     <!-- Chart Custom JavaScript -->
     <script async src="../assets/admin/js/chart-custom.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- app JavaScript -->
     <script src="../assets/admin/js/app.js"></script>
-
+    <script src="../assets/admin/js/index.js"></script>
 </body>
 
 </html>

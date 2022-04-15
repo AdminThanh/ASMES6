@@ -1,25 +1,24 @@
 import { editCategory, getCategoryId } from "./models/category.model.js";
 import Shared from "./main.js";
-import { getProductId } from "./models/product.model.js";
+import { getProductId, getData } from "./models/product.model.js";
 
 const shareder = new Shared();
 const url = new URL(window.location.href);
 const keyDetail = url.searchParams.get("keyProduct");
 
-console.log(keyDetail)
-// IIFE
-if (keyDetail) {
-    (async (keyDetail) => {
-        const res = await getProductId(keyDetail);
-        const product = res.val();
-        const image = `<img src="${product.image}" alt="full-image">`;
-        document.querySelector(".nameDetail").innerHTML = product.name;
-        document.querySelector(".priceDetail").innerHTML = formatVND(product.price);
-        // document.querySelector(".CatenameDetail").innerHTML = product.categorie.name;
-        document.querySelector(".descriptionDetail").innerHTML = product.detail;
-        document.querySelector(".detail").innerHTML = product.detail;
-        document.querySelector(".imageDetail").innerHTML = image;
-
-    })(keyDetail);
+const actGetProductCate = async (keyDetail) => {
+    const data = await getData(
+        `https://asmfull-6ff42-default-rtdb.firebaseio.com/products/${keyDetail}.json`
+    );
+    const image = `<img src="${data.image}" alt="full-image">`;
+    document.querySelector(".nameDetail").innerHTML = data.name;
+    document.querySelector(".priceDetail").innerHTML = formatVND(data.price);
+    document.querySelector(".descriptionDetail").innerHTML = data.detail;
+    document.querySelector(".detail").innerHTML = data.detail;
+    document.querySelector(".imageDetail").innerHTML = image;
+    const btn_mua_product = document.querySelector(".btn_mua_product");
+    btn_mua_product.innerHTML = `<button onclick="addCart(${data.id},'${data.name}',${data.price},'${data.image}')" class="cursor-pointer" id="btn-mua">Mua ngay</button>`;
 }
-
+if (keyDetail) {
+    actGetProductCate(keyDetail);
+}

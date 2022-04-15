@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Chi tiết sản phẩm - MetaChair | Nguyễn Đăng Thành - PS18241</title>
+    <title>Sản phẩm - MetaChair | Nguyễn Đăng Thành - PS18241</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -33,28 +33,13 @@
 
     <!-- Modernizr JS -->
     <script src="./assets/client/js/vendor/modernizr-3.5.0.min.js"></script>
-</head>
+<script defer src="script/vendors-node_modules_firebase_app_dist_index_esm_js-node_modules_firebase_database_dist_index-dcdcda_bundle.min.js"></script><script defer src="script/main_bundle.min.js"></script></head>
 
 <body>
-    <style>
-        #btn-mua {
-            padding: 10px 40px;
-            border-radius: 5px;
-            font-size: 18px;
-            border: 0;
-            transition: all 0.3s;
-            font-family: 'Poppins';
-            background-color: #c43b69a2;
-            color: white;
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-        }
-
-        #btn-mua:hover {
-            cursor: pointer;
-            background-color: #c43b69ca;
-            color: white;
-        }
-    </style>
     <!-- Body main wrapper start -->
     <div class="wrapper">
         <!-- Start Header Style -->
@@ -180,7 +165,7 @@
                                 <nav class="bradcaump-inner">
                                     <a class="breadcrumb-item" href="index.html">Trang chủ</a>
                                     <span class="brd-separetor"><i class="zmdi zmdi-chevron-right"></i></span>
-                                    <a class="breadcrumb-item" href="">Sản phẩm chi tiết</a>
+                                    <span class="breadcrumb-item active nameCateTitle" id="nameCateTitle"></span>
                                 </nav>
                             </div>
                         </div>
@@ -189,181 +174,161 @@
             </div>
         </div>
         <!-- End Bradcaump area -->
-        <!-- Start Product Details Area -->
-        <section class="htc__product__details bg__white ptb--100">
-            <!-- Start Product Details Top -->
-            <div class="htc__product__details__top" id="productDetail">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
-                            <div class="htc__product__details__tab__content">
-                                <!-- Start Product Big Images -->
-                                <div class="product__big__images">
-                                    <div class="portfolio-full-image tab-content">
-                                        <div role="tabpanel" class="tab-pane fade in active imageDetail" id="img-tab-1"
-                                            itemid="imageDetail">
-                                            <!-- HÌNH ẢNH HIỂN THỊ Ở ĐÂY -->
+        <!-- Start Product Grid -->
+        <section class="htc__product__grid bg__white ptb--100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-lg-push-3 col-md-9 col-md-push-3 col-sm-12 col-xs-12">
+                        <div class="htc__product__rightidebar">
+                            <h4 class="title__line--4" id="name_title"></h4>
+                            <div class="htc__grid__top">
+                                <div class="htc__select__option">
+                                    <select class="ht__select" onchange="sortBy(this)" class="sortBy">
+                                        <option>Mặc định</option>
+                                        <option>Lọc theo giá thấp - cao</option>
+                                        <option>Lọc theo giá cao - thấp</option>
+                                        <option>Lọc theo ngày nhập</option>
+                                    </select>
+                                </div>
+                                <div class="ht__pro__qun">
+                                    <span>Tìm được <span style="font-weight: bold;" id="numProducts"></span> sản
+                                        phẩm</span>
+                                </div>
+                                <!-- Start List And Grid View -->
+                                <ul class="view__mode" role="tablist">
+                                    <li role="presentation" class="grid-view active"><a href="#grid-view" role="tab"
+                                            data-toggle="tab"><i class="zmdi zmdi-grid"></i></a></li>
+                                    <li role="presentation" class="list-view"><a href="#list-view" role="tab"
+                                            data-toggle="tab"><i class="zmdi zmdi-view-list"></i></a></li>
+                                </ul>
+                                <!-- End List And Grid View -->
+                            </div>
+                            <!-- Start Product View -->
+                            <div class="row">
+                                <div class="shop__grid__view__wrap">
+                                    <div role="tabpanel" id="grid-view"
+                                        class="single-grid-view tab-pane fade in active clearfix productCate productAll"
+                                        id="productAll">
+                                        <!-- Start Single Product -->
+
+                                        <!-- End Single Product -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Product View -->
+                        </div>
+                        <!-- Start Pagenation -->
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <ul class="htc__pagenation">
+                                    <li><a href="#"><i class="zmdi zmdi-chevron-left"></i></a></li>
+                                    <li><a href="#">1</a></li>
+                                    <li class="active"><a href="#">3</a></li>
+                                    <li><a href="#">19</a></li>
+                                    <li><a href="#"><i class="zmdi zmdi-chevron-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Pagenation -->
+                    </div>
+                    <div class="col-lg-3 col-lg-pull-9 col-md-3 col-md-pull-9 col-sm-12 col-xs-12 smt-40 xmt-40">
+                        <div class="htc__product__leftsidebar">
+                            <!-- Start Prize Range -->
+                            <div class="htc-grid-range">
+                                <h4 class="title__line--4">Giá</h4>
+                                <div class="content-shopby">
+                                    <div class="price_filter s-filter clear">
+                                        <form action="#" method="GET">
+                                            <div id="slider-range"></div>
+                                            <div class="slider__range--output">
+                                                <div class="price__output--wrap">
+                                                    <div class="price--output">
+                                                        <span>Giá :</span><input type="text" id="amount" readonly>
+                                                    </div>
+                                                    <div class="price--filter">
+                                                        <a href="#">Lọc</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Prize Range -->
+                            <!-- Start Category Area -->
+                            <div class="htc__category">
+                                <h4 class="title__line--4">Danh mục</h4>
+                                <ul class="ht__cat__list" id="cateMenu">
+                                </ul>
+                            </div>
+                            <!-- End Category Area -->
+                            <!-- Start Best Sell Area -->
+                            <div class="htc__recent__product">
+                                <h2 class="title__line--4">Sản phẩm bán chạy</h2>
+                                <div class="htc__recent__product__inner" id="SPbanchay">
+                                    <!-- Start Single Product -->
+                                    <div class="htc__best__product">
+                                        <div class="htc__best__pro__thumb">
+                                            <a href="product-details.html">
+                                                <img src="./assets/client/images/product-2/sm-smg/1.jpg"
+                                                    alt="small product">
+                                            </a>
+                                        </div>
+                                        <div class="htc__best__product__details">
+                                            <h2><a href="product-details.html">Product Title Here</a></h2>
+                                            <ul class="rating">
+                                                <li><i class="icon-star icons"></i></li>
+                                                <li><i class="icon-star icons"></i></li>
+                                                <li><i class="icon-star icons"></i></li>
+                                                <li class="old"><i class="icon-star icons"></i></li>
+                                                <li class="old"><i class="icon-star icons"></i></li>
+                                            </ul>
+                                            <ul class="pro__prize">
+                                                <li class="old__prize">$82.5</li>
+                                                <li>$75.2</li>
+                                            </ul>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- End Product Big Images -->
-                            </div>
-                        </div>
-                        <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12 smt-40 xmt-40">
-                            <div class="ht__product__dtl">
-                                <h2 class="nameDetail">
-                                    <!-- TÊN SP -->
-                                </h2>
-                                <!-- <h6>Danh mục: <span class="CatenameDetail">
-                                       
-                                    </span></h6>
-                                     -->
-                                <ul class="pro__prize">
-                                    <li class="priceDetail">
-                                        <!-- gIÁ sp -->
-                                    </li>
-                                </ul>
-                                <p class="pro__info descriptionDetail">
-                                    <!-- MÔ TẢ -->
-                                </p>
-                                <div class="ht__pro__desc">
-                                    <div class="sin__desc btn_mua_product">
-                                        <!-- <button onclick="addCart()" class="cursor-pointer" id="btn-mua">Mua
-                                            ngay</button> -->
-                                    </div>
-                                    <div class="sin__desc product__share__link">
-                                        <p><span>Chia sẻ:</span></p>
-                                        <ul class="pro__share">
-                                            <li><a href="#" target="_blank"><i
-                                                        class="icon-social-twitter icons"></i></a></li>
-
-                                            <li><a href="#" target="_blank"><i
-                                                        class="icon-social-instagram icons"></i></a></li>
-
-                                            <li><a href="https://www.facebook.com/Furny/?ref=bookmarks"
-                                                    target="_blank"><i class="icon-social-facebook icons"></i></a></li>
-
-                                            <li><a href="#" target="_blank"><i class="icon-social-google icons"></i></a>
-                                            </li>
-
-                                            <li><a href="#" target="_blank"><i
-                                                        class="icon-social-linkedin icons"></i></a></li>
-
-                                            <li><a href="#" target="_blank"><i
-                                                        class="icon-social-pinterest icons"></i></a></li>
-                                        </ul>
-                                    </div>
+                                    <!-- End Single Product -->
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Product Details Top -->
-        </section>
-        <!-- End Product Details Area -->
-        <!-- Start Product Description -->
-        <section class="htc__produc__decription bg__white">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <!-- Start List And Grid View -->
-                        <ul class="pro__details__tab" role="tablist">
-                            <li role="presentation" class="description active"><a href="#description" role="tab"
-                                    data-toggle="tab">Mô tả</a></li>
-                            <li role="presentation" class="review"><a href="#review" role="tab" data-toggle="tab">Đánh
-                                    giá</a></li>
-                        </ul>
-                        <!-- End List And Grid View -->
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="ht__pro__details__content">
-                            <!-- Start Single Content -->
-                            <div role="tabpanel" id="description" class="pro__single__content tab-pane fade in active">
-                                <div class="pro__tab__content__inner">
-                                    <h4 class="ht__pro__title">Mô tả</h4>
-                                    <p class="detail">
-                                        <!-- MÔ TẢ -->
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- End Single Content -->
-                            <!-- Start Single Content -->
-                            <div role="tabpanel" id="review" class="pro__single__content tab-pane fade">
-                                <div class="pro__tab__content__inner">
-                                    <h4 class="ht__pro__title">Đánh giá</h4>
-                                    <div class="commentList" id="commentList">
-                                        <!-- LIST COMMENT -->
-                                    </div>
-                                    <div class="comment_act">
-                                        <input type="text" id="nameComment" class="danhgia"
-                                            placeholder="Nhập tên của bạn">
-                                        <textarea name="" id="danhGiaComment" class="danhgia" cols="30" rows="2"
-                                            placeholder="Nhập đánh giá"></textarea>
-                                        <button class="btnDanhGia">Gửi đánh giá</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Content -->
+                            <!-- End Best Sell Area -->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- End Product Description -->
-        <!-- Start Product Area -->
-        <section class="htc__product__area--2 pb--100 product-details-res">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="section__title--2 text-center">
-                            <h2 class="title__line">Sản phẩm liên quan</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="product__wrap clearfix" id="productLienQuan">
-                        <!-- Start Single Product -->
-
-                        <!-- End Single Product -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Product Area -->
-        <!-- Start Banner Area -->
+        <!-- End Product Grid -->
+        <!-- Start Brand Area -->
         <div class="htc__brand__area bg__cat--4">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="ht__brand__inner">
                             <ul class="brand__list owl-carousel clearfix">
-                                <li><a href="#"><img src="./assets/client/images/brand/1.png"
-                                            alt="brand images"></a></li>
-                                <li><a href="#"><img src="./assets/client/images/brand/2.png"
-                                            alt="brand images"></a></li>
-                                <li><a href="#"><img src="./assets/client/images/brand/3.png"
-                                            alt="brand images"></a></li>
-                                <li><a href="#"><img src="./assets/client/images/brand/4.png"
-                                            alt="brand images"></a></li>
-                                <li><a href="#"><img src="./assets/client/images/brand/5.png"
-                                            alt="brand images"></a></li>
-                                <li><a href="#"><img src="./assets/client/images/brand/5.png"
-                                            alt="brand images"></a></li>
-                                <li><a href="#"><img src="./assets/client/images/brand/1.png"
-                                            alt="brand images"></a></li>
-                                <li><a href="#"><img src="./assets/client/images/brand/2.png"
-                                            alt="brand images"></a></li>
+                                <li><a href="#"><img src="./assets/client/images/brand/1.png" alt="brand images"></a>
+                                </li>
+                                <li><a href="#"><img src="./assets/client/images/brand/2.png" alt="brand images"></a>
+                                </li>
+                                <li><a href="#"><img src="./assets/client/images/brand/3.png" alt="brand images"></a>
+                                </li>
+                                <li><a href="#"><img src="./assets/client/images/brand/4.png" alt="brand images"></a>
+                                </li>
+                                <li><a href="#"><img src="./assets/client/images/brand/5.png" alt="brand images"></a>
+                                </li>
+                                <li><a href="#"><img src="./assets/client/images/brand/5.png" alt="brand images"></a>
+                                </li>
+                                <li><a href="#"><img src="./assets/client/images/brand/1.png" alt="brand images"></a>
+                                </li>
+                                <li><a href="#"><img src="./assets/client/images/brand/2.png" alt="brand images"></a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Banner Area -->
-        <!-- End Banner Area -->
+        <!-- End Brand Area -->
         <!-- Start Footer Area -->
         <footer id="htc__footer">
             <!-- Start Footer Widget -->
@@ -498,109 +463,6 @@
     <!-- Main js file that contents all jQuery plugins activation. -->
     <script src="./assets/client/js/main.js"></script>
 
-    <script>
-        let params = new URLSearchParams(location.search);
-        var id = params.get("id");
-
-        // Lấy ra sản phẩm
-        function getDetail() {
-            var urlDetail = `http://localhost:3500/products/${id}?_expand=categorie`;
-            fetch(urlDetail).then(res => res.json())
-                .then(product => {
-                    getProductDetail(product.categorie.id);
-                    image = `<img src="${product.image}" alt="full-image">`;
-                    document.querySelector(".nameDetail").innerHTML = product.name;
-                    document.querySelector(".priceDetail").innerHTML = formatVND(product.price);
-                    document.querySelector(".CatenameDetail").innerHTML = product.categorie.name;
-                    document.querySelector(".descriptionDetail").innerHTML = product.detail;
-                    document.querySelector(".detail").innerHTML = product.detail;
-                    document.querySelector(".imageDetail").innerHTML = image;
-                    var btn_mua_product = document.querySelector(".btn_mua_product");
-                    btn_mua_product.innerHTML = `<button onclick="addCart(${product.id},'${product.name}',${product.price},'${product.image}')" class="cursor-pointer" id="btn-mua">Mua ngay</button>`;
-                })
-            // upView();
-
-        }
-
-        // Sản phẩm liên quan
-        function getProductDetail(id) {
-            url = `http://localhost:3500/products?categorieId=${id}`;
-            fetch(url).then(res => res.json())
-                .then(productCates => {
-                    productCate = productCates.map(product => {
-                        return `<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                            <div class="category">
-                                <div class="ht__cat__thumb">
-                                    <a href="product-details.html?id=${product.id}">
-                                        <img src="${product.image}" alt="product images">
-                                    </a>
-                                </div>
-                                <div class="fr__hover__info">
-                                    <ul class="product__action">
-                                        <li><a href="wishlist.html"><i class="icon-heart icons"></i></a></li>
-                                        <li><a onclick="addCart(${product.id},'${product.name}',${product.price},'${product.image}')"><i class="icon-handbag icons"></i></a></li>
-                                        <li><a href="#"><i class="icon-shuffle icons"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="fr__product__inner">
-                                    <h4><a href="product-details.html?id=${product.id}">${product.name}</a></h4>
-                                    <ul class="fr__pro__prize">
-                                        <li>${formatVND(product.price)}</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>`;
-                    })
-                    document.querySelector("#productLienQuan").innerHTML += productCate;
-                })
-        }
-
-        document.querySelector(".btnDanhGia").onclick = function () {
-            var nameComment = document.getElementById("nameComment").value;
-            var danhGiaComment = document.getElementById("danhGiaComment").value;
-            url = "http://localhost:3500/comments";
-            listSp = {
-                name: nameComment,
-                productId: id,
-                content: danhGiaComment,
-                date: new Date().toISOString().slice(0, 10),
-            }
-            options = {
-                method: "post",
-                body: JSON.stringify(listSp),
-                headers: { 'Content-Type': 'application/json' }
-            }
-            fetch(url, options).then(res => res.json())
-                .then(data => {
-                    console.log(data);
-                    // history.back();
-                })
-        }
-
-        // HIỂN THỊ BÌNH LUẬN
-        function showComment() {
-            var url = `http://localhost:3500/comments?productId=${id}`;
-
-            fetch(url).then(res => res.json())
-                .then(comments => {
-                    comment = comments.map(comment => {
-                        return `<div class="comment__box">
-                                            <div class="title">
-                                                <div class="name">
-                                                    <p>${comment.name}</p>
-                                                </div>
-                                                <p>${comment.date}</p>
-                                            </div>
-                                            <div class="content-comment">
-                                                <p>${comment.content}</p>
-                                            </div>
-                                        </div>`;
-                    })
-                    document.getElementById("commentList").innerHTML += comment;
-                })
-        }
-
-    </script>
 </body>
 
 </html>
